@@ -29,10 +29,10 @@ function App() {
             <Get_Data_Multisend />
 
           </Tab>
-          <Tab eventKey="Direct" title="Direct">
+          {/* <Tab eventKey="Direct" title="Direct">
             <Get_Data />
 
-          </Tab>
+          </Tab> */}
         
           <Tab eventKey="CIC" title="CIC">
             <Get_Data3 />
