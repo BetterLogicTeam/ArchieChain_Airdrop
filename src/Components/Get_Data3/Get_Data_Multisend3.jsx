@@ -62,9 +62,11 @@ export default function Get_Data() {
             const web3 = window.web3;
             let sum = 0;
             data.forEach(items => {
-                let num = items.Amounts;
-                sum = sum + num;
-                let amounts=(items.Amounts).toLocaleString('fullwide', {useGrouping:false});
+                let Amount= items.Amounts/1000000000000000000
+                // console.log("items",Amount);
+                let num = Amount;
+                sum = (sum) + (num);
+                let amounts=(Amount).toLocaleString('fullwide', {useGrouping:false});
                 let amounts1=parseInt(amounts)
                 let amounts2=(amounts1).toLocaleString('fullwide', {useGrouping:false});
 
@@ -121,7 +123,7 @@ export default function Get_Data() {
                     if (ownerAdress == acc) {
                         await contractOf.methods.sendMultiBnb(addressesValue, AmountsValue).send({
                             from: acc,
-                            value:parseInt(totalApprovedAmount)
+                            value: web3.utils.toWei(totalApprovedAmount.toString())
                         });
                         toast.success('Transition Confirm')
                         setloader(false)

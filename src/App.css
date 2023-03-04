@@ -1,5 +1,9 @@
 .App {
   /* text-align: center; */
+  background-color: #000000;
+  height: 120vh;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .App-logo {
@@ -35,4 +39,14 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+@media screen and (max-width:600px) {
+  .App {
+    /* text-align: center; */
+background-color: #000000;
+    height: auto;
+    padding-bottom: 5rem;
+  }
+  
 }
