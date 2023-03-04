@@ -25,7 +25,7 @@ function App() {
           className="mb-3"
           fill
         >
-            <Tab eventKey="Approve" title="Approve and Multisend">
+            <Tab eventKey="Approve" title="Archie Token Airdrop">
             <Get_Data_Multisend />
 
           </Tab>
@@ -34,7 +34,7 @@ function App() {
 
           </Tab> */}
         
-          <Tab eventKey="CIC" title="CIC">
+          <Tab eventKey="CIC" title="ARC Coin Airdrop">
             <Get_Data3 />
 
           </Tab>

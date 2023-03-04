@@ -10,12 +10,13 @@ body{
 }
 
 .Header_btn{
-    background-color:#205721 ;
-    border: none;
+    background-color:transparent ;
+    border: 1px solid #B54D06;
     outline: none;
     padding: 10px 15px ;
     color: white;
     border-radius:10px ;
+
 }
 
 .Header_btn:hover{
