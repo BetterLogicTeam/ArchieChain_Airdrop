@@ -63,12 +63,15 @@ export default function Get_Data() {
             let sum = 0;
             data.forEach(items => {
                 let Amount= items.Amounts/1000000000000000000
+                let AmountforFuction= items.Amounts
+
                 // console.log("items",Amount);
                 let num = Amount;
                 sum = (sum) + (num);
-                let amounts=(Amount).toLocaleString('fullwide', {useGrouping:false});
+                let amounts=(AmountforFuction).toLocaleString('fullwide', {useGrouping:false});
                 let amounts1=parseInt(amounts)
                 let amounts2=(amounts1).toLocaleString('fullwide', {useGrouping:false});
+                // amounts2= web3.utils.toWei(amounts2.toString())
 
 
 
@@ -82,6 +85,8 @@ export default function Get_Data() {
             // sum = web3.utils.fromWei((sum).toString())
             // // alert(sum)
             setTotalApprovedAmount(sum)
+            console.log("pathArray", AddresArray, AmountArray);
+
             
             setaddressesValue(AddresArray)
             setAmountsValue(AmountArray)
@@ -107,7 +112,6 @@ export default function Get_Data() {
 
             try {
                 setloader(true)
-                // console.log("pathArray", addressesValue, AmountsValue);
 
                 // let pathArray = addressesValue.split(',');
                 // let Number_Array = AmountsValue.split(',')
